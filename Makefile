@@ -30,11 +30,6 @@ define HEADER
 endef
 export HEADER
 
-.PHONY: requirements-dev
-requirements-dev:
-	@echo "install requirements-dev"
-	pip install -r requirements-dev.txt
-
 .PHONY: requirements
 requirements:
 	@echo "install requirements"

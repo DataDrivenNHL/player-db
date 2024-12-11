@@ -7,13 +7,14 @@ import aws_cdk as cdk
 
 from constructs import Construct
 
+
 class PlayerDbStack(Stack):
 
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
 
-
-        # create a dynamo db table called nhl-players-v1 with a partition key of player_id and a GSI of player_name and team_name
+        # create a dynamo db table called nhl-players-v1 with a partition key
+        # of player_id and a GSI of player_name and team_name
         self.table = dynamodb.TableV2(
             self, "GlobalTable",
             partition_key=dynamodb.Attribute(

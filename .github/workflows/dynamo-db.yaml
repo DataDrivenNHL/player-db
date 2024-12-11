@@ -31,6 +31,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: "22"
+    - name: Download CDK
+      run:  npm install -g aws-cdk
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@master
       with:
@@ -65,6 +71,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: Set up Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: "22"
+    - name: Download CDK
+      run:  npm install -g aws-cdk
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@master
       with:

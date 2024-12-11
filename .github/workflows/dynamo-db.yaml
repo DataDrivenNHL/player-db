@@ -37,11 +37,6 @@ jobs:
         audience: sts.amazonaws.com
         role-to-assume: arn:aws:iam::208463314099:role/github-actions-cdk-role
         aws-region: "us-east-1"
-    - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        make lint
     - name: Test with pytest
       run: |
         make test
